@@ -3,6 +3,7 @@ name = "test-lambda"
 version = "0.1.0"
 authors = ["toidiu <apoorv@toidiu.com>"]
 edition = "2018"
+autobins = false
 
 [dependencies]
 serde = "^1"
@@ -10,3 +11,7 @@ serde_derive = "^1"
 simple_logger = "^1"
 lambda_runtime = "^0.1"
 log = "^0.4"
+
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"
