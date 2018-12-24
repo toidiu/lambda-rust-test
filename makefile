@@ -2,9 +2,9 @@
 release:
 	cargo build --release --target x86_64-unknown-linux-musl
 
-all: zip create
+create-function: zip create
 
-test:
+invoke:
 	aws lambda invoke --function-name rustTest \
 	--payload '{"firstName": "rust"}' \
 	output.json && cat output.json && rm output.json
